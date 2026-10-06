@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "range-fade",
+  "comment": "AN EXAMPLE, NOT ADVICE. Round illustrative numbers, picked to show what the schema can say, never measured on any market: replay it on your own tape before you believe any of it. The condition nearLevel.level is what picks the leg of the fade: with support it buys the floor of the range, with resistance it sells the ceiling.",
+  "when": {
+    "markets": { "top": 10 },
+    "regime": ["Range"],
+    "rsi14": { "min": 30, "max": 70 },
+    "rangeWidthPct": { "min": 1, "max": 5 },
+    "nearLevel": { "level": "support", "withinPctOfWidth": 25 },
+    "minDayVolumeUsd": 5000000
+  },
+  "order": {
+    "side": "fade",
+    "sizeUsd": 100,
+    "leverage": 2,
+    "entry": { "type": "level", "offsetPct": 0.1 },
+    "tp": { "rangeShare": 0.5 },
+    "sl": { "outsidePct": 1 },
+    "ttlHours": 6,
+    "cooldownMinutes": 30,
+    "maxRiskReward": 3
+  }
+}

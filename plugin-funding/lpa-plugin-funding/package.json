@@ -1,0 +1,33 @@
+{
+  "name": "lpa-plugin-funding",
+  "version": "1.0.0",
+  "description": "An example plugin of lpa: the markets paying the most funding.",
+  "license": "MIT",
+  "files": [
+    "plugin.mjs"
+  ],
+  "lpa": {
+    "schemaVersion": 1,
+    "name": "funding",
+    "main": "plugin.mjs",
+    "commands": [
+      {
+        "name": "scan",
+        "summary": "The markets paying the most funding.",
+        "capabilities": [
+          "market-read"
+        ],
+        "options": {
+          "top": "string"
+        }
+      }
+    ],
+    "tools": [
+      {
+        "name": "funding_scan",
+        "command": "scan",
+        "description": "The markets paying the most funding, highest first."
+      }
+    ]
+  }
+}
