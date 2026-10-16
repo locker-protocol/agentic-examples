@@ -1,0 +1,7 @@
+mcp_servers:
+  locker:
+    command: "npx"
+    args: ["-y", "--ignore-scripts", "@locker-protocol/agent-wallet-hyperliquid-trader-mcp@latest"]
+    enabled: true
+    timeout: 120
+    connect_timeout: 60

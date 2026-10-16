@@ -1,0 +1,12 @@
+{
+  "mcp": {
+    "servers": {
+      "locker": {
+        "transport": "stdio",
+        "command": "npx",
+        "args": ["-y", "--ignore-scripts", "@locker-protocol/agent-wallet-hyperliquid-trader-mcp@latest"],
+        "enabled": true
+      }
+    }
+  }
+}
